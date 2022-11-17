@@ -4,8 +4,8 @@
 - install `lando` on your computer -> [instructions](https://docs.lando.dev/getting-started/installation.html)
 - run `lando start`
 - copy `config/settings.local.php` and `config/development.services.yml` to `web/sites/default`
-- navigate to `web` folder
-- import database with `lando drush sql-cli < ./config/initial-database.sql.gz`
+- import database with `lando db-import ./config/initial-database.sql.gz`
+- clear cache with `lando drush cr`
 - login with `admin` and `1xw*N8wmzyXnTZ`
 
 ## Instructions

@@ -9,33 +9,9 @@ config:
   xdebug: false
 
 services:
-  appserver:
-    install_dependencies_as_root:
-      - apt-get update && apt-get install -y openjdk-11-jdk && apt-get install -y ant && apt-get clean
-
-    build_as_root:
-      - curl -sL https://deb.nodesource.com/setup_14.x | bash -
-      - apt-get install -y nodejs
-
   database:
     type: mariadb:10.5.13
     portforward: 23569
-
-  node:
-    type: node:14
-    globals:
-      gulp-cli: latest
-
-tooling:
-  npm:
-    service: node
-  node:
-    service: node
-  gulp:
-    service: node
-  ant:
-    service: appserver
-    cmd: 'ant'
 
 events:
   post-start:
