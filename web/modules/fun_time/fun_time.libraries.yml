@@ -1,0 +1,4 @@
+fun_time:
+  version: 1.x
+  js:
+    js/fun_time.js: {}

@@ -24,7 +24,12 @@ class FunTimeTitleBlock extends BlockBase {
     $title = $config->get('title');
 
     return [
-      '#markup' => '<h1 id="title">'.$title.'</h1>',   
+      '#markup' => '<h1 id="title">'.$title.'</h1>',
+      '#attached' => [
+        'library' => [
+          'fun_time/fun_time',
+        ],
+      ],
     ];
   }
 
