@@ -1,0 +1,7 @@
+fun_time.config_form:
+  path: '/admin/config/system/fun_time'
+  defaults:
+    _form: '\Drupal\fun_time\Form\FunConfigForm'
+    _title: 'Fun time Configuration'
+  requirements:
+    _permission: 'administer site configuration'
