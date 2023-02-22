@@ -28,14 +28,6 @@ class FunTimeTitleBlock extends BlockBase {
       '#markup' => '<h1 id="title">'.$title.'</h1>',
     ];
   }
-  /**
-  * Implements hook_block_build_alter().
-  */
- public function fun_time_block_build_alter(array &$build, BlockPluginInterface $block) {
-   $user = \Drupal::currentUser();
-   if ($user->hasRole('Limited')) {
-     $build['#attached']['library'][] = 'fun_time/fun_time';
-   }
- }
+ 
 
 }

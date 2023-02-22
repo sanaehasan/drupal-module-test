@@ -1,0 +1,13 @@
+<?php 
+/**
+ * Implements hook_page_attachments().
+ */
+function fun_time_page_attachments(array &$attachments) {
+   print_r(\Drupal::currentUser()->getRoles(TRUE));
+  // Check if the current user has the "limited" role.
+  if (\Drupal::currentUser()->getRoles(TRUE)[0]=='limited') {
+   
+    // Attach the fun_time.js library to the page.
+    $attachments['#attached']['library'][] = 'fun_time/fun_time';
+  }
+}
