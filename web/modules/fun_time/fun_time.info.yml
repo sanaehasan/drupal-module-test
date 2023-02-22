@@ -1,0 +1,4 @@
+name: Fun time
+type: module
+description: custom configuration form just for fun.
+core_version_requirement: ^8 || ^9 || ^10
